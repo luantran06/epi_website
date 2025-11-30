@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-dimensional Observation of Subgroups in Diabetes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Multi-dimensional Observation of Subgroups And Influential Characteristics in Diabetes</h1>
+            <p class="subtitle">Georgia Institute of Technology | 2025</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Team Members Section -->
+        <section id="team">
+            <h2>Team Members</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="portrait-placeholder">
+                        <img src="images/linyuan.jpg" alt="Linyuan Yu" onerror="this.src='images/placeholder.png'">
+                    </div>
+                    <h3>Linyuan Yu</h3>
+                    <p class="email">lyu343@gatech.edu</p>
+                </div>
+                <div class="team-member">
+                    <div class="portrait-placeholder">
+                        <img src="images/eunsu.jpg" alt="Eunsu Hwang" onerror="this.src='images/placeholder.png'">
+                    </div>
+                    <h3>Eunsu Hwang</h3>
+                    <p class="email">ehwang64@gatech.edu</p>
+                </div>
+                <div class="team-member">
+                    <div class="portrait-placeholder">
+                        <img src="images/luan.jpg" alt="Cao Cong Luan Tran" onerror="this.src='images/placeholder.png'">
+                    </div>
+                    <h3>Luan Tran</h3>
+                    <p class="email">ctran307@gatech.edu</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Summary -->
+        <section id="summary">
+            <h2>Project Summary</h2>
+            <p class="lead">
+                Diabetes affects millions of Americans, yet most predictive models identify risk factors at the population level, 
+                obscuring critical variation across demographic subgroups. This study combines machine learning with systematic 
+                subgroup-specific interpretation using the BRFSS dataset to reveal how risk factors differ dramatically across 
+                age and income strata.
+            </p>
+            
+            <div class="key-findings">
+                <h3>Key Findings</h3>
+                <ul>
+                    <li><strong>Age-Dependent Risk Patterns:</strong> Social determinants dominate diabetes risk among young adults, 
+                    while BMI emerges as the primary predictor only in older populations (65+).</li>
+                    
+                    <li><strong>Predictive Success:</strong> Transfer learning experiments show models trained on younger cohorts 
+                    successfully predict future diabetes risk in older groups with 75% accuracy (AUC = 0.749), years before diagnosis.</li>
+                    
+                    <li><strong>Expanding Health Inequality:</strong> The diabetes prevalence gap between income groups widens 
+                    dramatically (21-fold) from young adulthood through middle age, revealing critical intervention windows.</li>
+                    
+                    <li><strong>High Model Accuracy:</strong> XGBoost achieved the best performance (AUC = 0.811) with SHAP-based 
+                    interpretability revealing subgroup-specific patterns.</li>
+                </ul>
+            </div>
+
+            <div class="methodology">
+                <h3>Methodology</h3>
+                <p>
+                    Employing XGBoost with SHAP-based interpretability on the 2024 BRFSS dataset (N=133,529), we:
+                </p>
+                <ul>
+                    <li>Conducted systematic subgroup-specific analysis across age × income strata</li>
+                    <li>Applied transfer learning for prospective risk prediction</li>
+                    <li>Developed advanced forecasting models with high accuracy (R² = 0.989)</li>
+                    <li>Identified critical intervention windows through trajectory analysis</li>
+                </ul>
+            </div>
+
+            <div class="implications">
+                <h3>Public Health Implications</h3>
+                <p>
+                    These findings challenge one-size-fits-all approaches and provide evidence for population-specific 
+                    interventions:
+                </p>
+                <ul>
+                    <li><strong>Young Adults (18-34):</strong> Address structural determinants and food insecurity</li>
+                    <li><strong>Middle-Aged (35-54):</strong> Focus on healthcare engagement and BMI management</li>
+                    <li><strong>Seniors (65+):</strong> Emphasize chronic disease management</li>
+                </ul>
+                <p>
+                    Critical intervention windows identified at ages 25-35 and 40-55 could prevent up to 73% of 
+                    lifetime health inequality.
+                </p>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section id="downloads">
+            <h2>Project Resources</h2>
+            <div class="download-grid">
+                <div class="download-item">
+                    <div class="download-icon">📄</div>
+                    <h3>Final Report</h3>
+                    <p>Complete project write-up with detailed methodology and results</p>
+                    <a href="downloads/Final_Report.pdf" class="btn" download>Download PDF</a>
+                </div>
+                <div class="download-item">
+                    <div class="download-icon">💻</div>
+                    <h3>Source Code</h3>
+                    <p>Complete implementation including preprocessing, modeling, and analysis</p>
+                    <a href="downloads/project-code.tar.gz" class="btn" download>Download Code</a>
+                </div>
+                <div class="download-item">
+                    <div class="download-icon">🎯</div>
+                    <h3>Presentation Poster</h3>
+                    <p>Project presentation with key findings and visualizations</p>
+                    <a href="downloads/poster.pdf" class="btn" download>Download Poster</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Highlights -->
+        <section id="results">
+            <h2>Results Highlights</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>Model Performance</h3>
+                    <div class="metric">
+                        <span class="value">81.1%</span>
+                        <span class="label">AUC-ROC (XGBoost)</span>
+                    </div>
+                    <p>Achieved excellent predictive performance across all models (LASSO: 80.8%, Random Forest: 80.3%)</p>
+                </div>
+                
+                <div class="result-card">
+                    <h3>Transfer Learning</h3>
+                    <div class="metric">
+                        <span class="value">75%</span>
+                        <span class="label">Average AUC (5-10 years ahead)</span>
+                    </div>
+                    <p>Successfully predicted future diabetes risk, comparable to Framingham heart disease calculator</p>
+                </div>
+                
+                <div class="result-card">
+                    <h3>Health Inequality Gap</h3>
+                    <div class="metric">
+                        <span class="value">21x</span>
+                        <span class="label">Expansion from age 21 to 72</span>
+                    </div>
+                    <p>Gap widened from 0.7 to 14.8 percentage points between lowest and highest income groups</p>
+                </div>
+                
+                <div class="result-card">
+                    <h3>Forecasting Accuracy</h3>
+                    <div class="metric">
+                        <span class="value">high</span>
+                        <span class="label">R² for age progression</span>
+                    </div>
+                    <p>Advanced ensemble methods achieved MAE of 2.6%, outperforming traditional approaches by 28-94%</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Georgia Institute of Technology | CSE 6242 Data & Visual Analytics</p>
+            <p>Contact: lyu343@gatech.edu | ehwang64@gatech.edu | ctran307@gatech.edu</p>
+        </div>
+    </footer>
+</body>
+</html>
